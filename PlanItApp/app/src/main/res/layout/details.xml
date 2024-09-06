@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+
+   >
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="900dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/wave" />
+
+    <TextView
+        android:id="@+id/taskTitleTextView"
+        android:layout_width="354dp"
+        android:layout_height="63dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/custom_round_ui_shape"
+        android:paddingTop="7dp"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/colourpurp"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="376dp"
+        android:layout_below="@+id/taskTitleTextView"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/box_shape"
+        android:backgroundTint="#E5D4D4"
+        android:baselineAligned="false"
+        android:fadingEdge="horizontal|vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/taskDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskTitleTextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colourpurp"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/taskTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskDescriptionTextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colourpurp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/taskDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskTimeTextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colourpurp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/taskReminderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskDateTextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colourpurp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/taskPriorityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskReminderTextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colourpurp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/taskNatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskPriorityTextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colourpurp"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

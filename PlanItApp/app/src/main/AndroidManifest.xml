@@ -1,0 +1,76 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codegama.PlanIt">
+
+    <!-- Permissions -->
+
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <!-- Application -->
+
+    <application
+        android:name="com.codegama.PlanIt.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/logo1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Activities -->
+
+        <activity
+            android:name="com.codegama.PlanIt.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.codegama.PlanIt.activity.AllTasksActivity"
+            android:label="All Tasks"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.codegama.PlanIt.TasksAndCalendar.CreateTaskActivity"
+            android:label="Create Task"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.codegama.PlanIt.TasksAndCalendar.ShowCalendar"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.codegama.PlanIt.activity.TaskDetails"
+            android:theme="@style/AppTheme" />
+
+        <!-- BroadcastReceiver -->
+
+        <receiver
+            android:name="com.codegama.PlanIt.broadcastReceiver.AlarmBroadcastReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+
+        <!-- Service -->
+
+        <service
+            android:name="com.codegama.PlanIt.broadcastReceiver.AlarmService"
+            android:enabled="true"
+            android:exported="true" />
+
+    </application>
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+</manifest>
